@@ -1,4 +1,7 @@
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+# Academy One Learning Platform - UI / UX Prototypes
+  Academy One Learning Platform - Proótipos de UI / UX
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+Este repositório é utilizado para organizar o fluxo de navegação e elaborar protótipos de design para a plataforma de aprendizado da Academy One
+
+
+## Em breve
