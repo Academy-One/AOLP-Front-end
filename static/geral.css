@@ -443,7 +443,7 @@ h2 {
 .dropdown {
     z-index: 9999;
     position: absolute;
-    top: -4%;
+    top: 0%;
     right: 0;
     width: 100%;
     background-color: #FFF;
@@ -452,6 +452,18 @@ h2 {
     opacity: 100;
 
     transition: 0.5s all;
+}
+
+/* LOGGED IN / REGISTERED */
+
+.username {
+    font-size: 1.6rem;
+   font-weight: 700;
+}
+
+.user-email {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .dropdown nav {
@@ -486,7 +498,7 @@ h2 {
 }
 
 .menu-btn--close {
-    margin-top: 0.7rem;
+    /* margin-top: 0.7rem; */
 }
 
 .nav-items--list {
