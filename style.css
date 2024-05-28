@@ -1,6 +1,4 @@
 
-
-
 /*===============*/
 /* - NAVEGAÇÃO - */
 /*===============*/
@@ -187,7 +185,7 @@
 }
 
 .item-curso-título {
-
+    font-size: 2rem;
 }
 
 .item-curso-img {
@@ -212,13 +210,9 @@
     transition: 0.3s all;
 }
 
-.opcao-de-visualizacao:hover {
-    color: #35BEF0;
-    background-color: #f1f3f5;
-    border-radius: 3px;
-}
 
-.opcao-de-visualizacao, .opcao-colunas {
+.opcao-de-visualizacao, 
+.opcao-colunas {
     width: 24px;
     height: 24px;
     
@@ -226,26 +220,28 @@
 
 .opcao-de-visualizacao--active {
     color: #35BEF0;
-    background-color: #f1f3f5;
-    border-radius: 3px;
 }
+
+
 
 
 .lista--conquistas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.4rem;
     row-gap: 4.4rem;
     justify-items: center;
     list-style: none;
 }
 
 .item-conquista {
+    gap: 2.4rem;
 
 }
 
 .item-conquista img {
     width: 45px;
-    height: 45px;
+    height: auto;
 }
 
 /*=========*/

@@ -18,6 +18,40 @@ const subMenus = document.querySelectorAll(".nav-submenu-list");
 const arrowsOpen = document.querySelectorAll(".arrow--open");
 const arrowsClose = document.querySelectorAll(".arrow--close");
 
+
+// Grid View Options
+const gridViewOptions = document.querySelector('.caixa-de-opcoes')
+const gridViewBtns = document.querySelectorAll('.opcao-de-visualizacao');
+const gridView = document.querySelector('.lista--conquistas')
+const gridItems = document.querySelectorAll(('.item-conquista'))
+
+// gridList.style.gridTemplateColumns = 'repeat(3, 1fr)';
+
+
+gridViewOptions.addEventListener('click', (e) => {
+  const clicked = e.target
+
+  gridViewBtns.forEach((btn) => btn.classList.remove('opcao-de-visualizacao--active'))
+
+  // return gridView.style.gridTemplateColumns = 'auto'
+  if ( clicked.classList.contains('opcao-lista')) {
+    clicked.classList.add('opcao-de-visualizacao--active')
+    gridView.style.gridTemplateColumns = 'auto'
+    gridView.style.justifyItems = 'start';
+    gridItems.forEach((item) => item.style.display = 'flex')
+  }
+  
+  if (clicked.classList.contains('opcao-colunas')) {
+    clicked.classList.add('opcao-de-visualizacao--active')
+    gridView.style.gridTemplateColumns = 'repeat(3, 1fr)'
+    gridView.style.justifyItems = 'center';
+    gridItems.forEach((item) => item.style.display = 'block')
+  }
+})
+
+
+
+
 // Open Mobile Nav
 const controlMenu = function () {
   if (dropdown.classList.contains("hidden")) {
