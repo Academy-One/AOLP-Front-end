@@ -1,0 +1,313 @@
+
+
+
+/*===============*/
+/* - NAVEGAÇÃO - */
+/*===============*/
+
+.nav-perfil-img img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+
+
+/*============*/
+/* - HEADER - */
+/*============*/
+
+
+.perfil-header {
+    background-color: #d7f2fc;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    padding: 3.2rem 2.8rem;
+    row-gap: 3.2rem;
+}
+
+.heading-secundária.bem-vindo {
+    width: 75%;
+    color: inherit;
+    margin: 0;
+}
+
+
+/*===============*/
+/* - DASHBOARD - */
+/*===============*/
+
+
+
+.section--dashboard {
+    padding: 6.4rem 0;
+}
+
+
+.dashboard {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+.painel--link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.painel--link:link, 
+.painel--link:visited {
+    color: inherit;
+    
+}
+
+.painel--link:hover, 
+.painel--link:active {   
+    color: inherit;   
+}
+
+.painel-tag {
+    font-size: 1.2rem;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.dashboard--paineis {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.dashboard-painel {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #1D267D;
+    padding-bottom: 1.6rem;
+}
+
+.painel-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.painel-conteudo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+
+.curso-título, 
+.conquista-título {
+    font-size: 1.6rem;
+}
+
+/* filtros */
+#cursos {
+    font-weight: 600;
+    padding: 0.4rem 0.6rem;
+    border: 1.55px solid #222;
+    border-radius: 3px;
+}
+
+#cursos:focus {
+    outline: 1.55px solid #1D267D;
+}
+
+.cursos {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+
+.painel-img-box, 
+.curso--img {
+    width: 50%;
+    height: auto;
+    text-align: end;
+    align-self: center;
+    border-radius: 11px;
+    margin-top: 11px;
+}
+
+
+.lista--cursos {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+
+.lista--item-curso {
+    width: 100%;
+    height: 100%;
+}
+
+.item-curso {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.4rem;
+}
+
+.item-curso-img {
+    border-radius: 11px;
+    width: 90px;
+    height: 60px;
+}
+
+.item-curso-conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-curso-título {
+
+}
+
+.item-curso-img {
+    
+}
+
+
+.conquistas {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+.conquistas .caixa-de-opcoes {
+   display: flex;
+   gap: 1.2rem;
+
+}
+
+.opcao-de-visualizacao {
+    color: inherit;
+
+    transition: 0.3s all;
+}
+
+.opcao-de-visualizacao:hover {
+    color: #35BEF0;
+    background-color: #f1f3f5;
+    border-radius: 3px;
+}
+
+.opcao-de-visualizacao, .opcao-colunas {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.opcao-de-visualizacao--active {
+    color: #35BEF0;
+    background-color: #f1f3f5;
+    border-radius: 3px;
+}
+
+
+.lista--conquistas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 4.4rem;
+    justify-items: center;
+    list-style: none;
+}
+
+.item-conquista {
+  box-shadow: 0 1.5px 10px 1px rgba(0, 0, 0, 0.37);
+  padding: 2.4rem;
+  border-radius: 50%;
+}
+
+.item-conquista img {
+    width: 45px;
+    height: 45px;
+}
+
+/*=========*/
+/* - CTA - */
+/*=========*/
+
+
+.cta-conteudo {
+    display: grid;
+    row-gap: 2.4rem;
+}
+
+.cta-conteudo div {
+   
+}
+
+.cta-conteudo div img {
+    border-radius: 11px;
+    width: 100%;
+    height: auto;
+}
+
+.cta-conteudo div .btn {
+    align-self:  flex-start;
+}
+
+.cta-texto {
+    font-size: 1.6rem;
+
+    
+}
+
+
+
+/* - CAROUSEL - */
+
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
