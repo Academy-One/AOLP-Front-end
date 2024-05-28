@@ -604,29 +604,12 @@ h2 {
 /* CAROUSEL */
 
 .slider {
-    /* z-index: 9998; */
-    position: relative;
-
-    max-width: 85%;
-    height: 18rem;
-    width: 30rem;
-    margin: 0 auto;
-  
-    overflow: hidden;
-    transition: 0.3s all;
-}
-
-.slider--inner {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 0.5rem;
-    pointer-events: none;
-    transition: 0s ease-in;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    overflow-y: scroll;
+    gap: 2.4rem;
+    transition: 0.3s all;
 }
 
 .slide {
