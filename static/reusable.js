@@ -21,54 +21,63 @@ const arrowsClose = document.querySelectorAll('.arrow--close');
 
 
 // Open Mobile Nav
-const controlMenu = function() {
+const controlMenu = function () {
+  if (dropdown.classList.contains("hidden")) {
+    body.style.overflow = "hidden";
+    box.style.filter = "blur(5px)";
+  } else body.style.overflow = "visible";
 
-    if (dropdown.classList.contains('hidden'))  body.style.overflow = 'hidden';
-    else  body.style.overflow = 'visible';
+  box.classList.toggle("active");
+  dropdown.classList.toggle("hidden");
+};
 
-    box.classList.toggle('active')
-    dropdown.classList.toggle('hidden');   
-}
+menuOpen.addEventListener("click", controlMenu);
+menuClose.addEventListener("click", controlMenu);
 
+// Cada link possui uma classe que o associa ao seu respectivo sub-menu.
+subMenus.forEach((menu) => menu.classList.remove("nav-submenu-list--active"));
+menuList.addEventListener("click", function (e) {
+  // Seleciona o
+  const clicked = e.target.closest(".nav-link-box");
 
-menuOpen.addEventListener('click', controlMenu);
-menuClose.addEventListener('click', controlMenu);
+  if (!clicked) return;
 
+  // Faz parte do mecanismo que permite apenas um sub-menu aberto por vez.
+  let curMenu = document.querySelector(
+    `.nav-submenu-list--${clicked.dataset.id}`
+  );
 
-// Open Mobile Nav Sub-Menu
-subMenus.forEach((menu) => menu.classList.remove('nav-submenu-list--active'))
-menuList.addEventListener('click', function(e) {
-    const clicked = e.target.closest('.nav-link-box')
-    
-    if (!clicked) return
-    
-    let curMenu = document.querySelector(`.nav-submenu-list--${clicked.dataset.id}`)
-    const isActive = curMenu.classList.contains('nav-submenu-list--active')
-    console.log(curMenu)
-    
-    
-    // Manage hidden classes
-    subMenus.forEach((menu) => menu.classList.remove('nav-submenu-list--active'))
-    arrowsClose.forEach((arrow) => arrow.classList.add(`arrow--hidden`))
-    arrowsOpen.forEach((arrow) => arrow.classList.remove(`arrow--hidden`))
-    
-    // Already active link
-    if (isActive && curMenu.dataset.id !== clicked.dataset.id) {
-        if (curMenu.dataset.id)  {
-           document.querySelector(`.arrow--open--${curMenu.dataset.id}`).classList.remove('arrow--hidden');
-           document.querySelector(`.arrow--close--${curMenu.dataset.id}`).classList.add('arrow--hidden');
-        }
-        
-    }  else {
-        
-        // Activate content area
-        curMenu.classList.add('nav-submenu-list--active');
+  if (!curMenu) return;
 
-        // Activate / Deactivate arrows
-        document.querySelector(`.arrow--open--${clicked.dataset.id}`).classList.add('arrow--hidden');
-        document.querySelector(`.arrow--close--${clicked.dataset.id}`).classList.remove('arrow--hidden');  
+  const isActive = curMenu.classList.contains("nav-submenu-list--active");
+  console.log(curMenu);
+
+  subMenus.forEach((menu) => menu.classList.remove("nav-submenu-list--active"));
+  arrowsClose.forEach((arrow) => arrow.classList.add(`arrow--hidden`));
+  arrowsOpen.forEach((arrow) => arrow.classList.remove(`arrow--hidden`));
+
+  if (isActive && curMenu.dataset.id !== clicked.dataset.id) {
+    if (curMenu.dataset.id) {
+      document
+        .querySelector(`.arrow--open--${curMenu.dataset.id}`)
+        .classList.remove("arrow--hidden");
+      document
+        .querySelector(`.arrow--close--${curMenu.dataset.id}`)
+        .classList.add("arrow--hidden");
     }
-})
+  } else {
+    // Ativar
+    curMenu.classList.add("nav-submenu-list--active");
+
+    // Ativar / Desativar setas indicativas
+    document
+      .querySelector(`.arrow--open--${clicked.dataset.id}`)
+      .classList.add("arrow--hidden");
+    document
+      .querySelector(`.arrow--close--${clicked.dataset.id}`)
+      .classList.remove("arrow--hidden");
+  }
+});
 
 
 

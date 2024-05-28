@@ -279,6 +279,11 @@ h2 {
     gap: 0.8rem;
 }
 
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
+
 .btn--main {
     background-color: #35BEF0;
     color: #f1f3f5;
@@ -518,7 +523,7 @@ h2 {
 .nav-submenu-list--active {
     color: #334155;
     margin-left: 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -526,16 +531,33 @@ h2 {
 }
 
 .nav-link {
-  
+    display: flex;
+    gap: 1.2rem;
+
 }
+
+.nav-link svg{
+    width: 24px;
+    height: 24px;
+}
+
+
 
 .nav-submenu--list {
     display: none;
 }
 
 .submenu-link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
     text-decoration: none;
     color: inherit;
+}
+
+.submenu-link svg {
+    width: 18px;
+    height: 18px;
 }
 
 .box {
