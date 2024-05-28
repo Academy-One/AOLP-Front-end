@@ -3,29 +3,30 @@
 
 
 const body = document.querySelector('body');
-const header = document.querySelector('.header');
+const sections = document.querySelectorAll("section");
+const header = document.querySelector(".header");
 
 // Dropdown Navigation
-const menuList = document.querySelector('.nav-items--list')
-const menuOpen = document.querySelector('.menu-btn--open')
-const menuClose = document.querySelector('.menu-btn--close')
-const dropdown = document.querySelector('.dropdown')
-const box = document.querySelector('.box')
-const navItems = document.querySelectorAll('.nav-link-box')
-const subMenus = document.querySelectorAll('.nav-submenu-list')
+const menuList = document.querySelector(".nav-items--list");
+const menuOpen = document.querySelector(".menu-btn--open");
+const menuClose = document.querySelector(".menu-btn--close");
+const dropdown = document.querySelector(".dropdown");
+const box = document.querySelector(".box");
+const navItems = document.querySelectorAll(".nav-link-box");
+const subMenus = document.querySelectorAll(".nav-submenu-list");
 
-const arrowsOpen = document.querySelectorAll('.arrow--open');
-const arrowsClose = document.querySelectorAll('.arrow--close');
-
-
-
+const arrowsOpen = document.querySelectorAll(".arrow--open");
+const arrowsClose = document.querySelectorAll(".arrow--close");
 
 // Open Mobile Nav
 const controlMenu = function () {
   if (dropdown.classList.contains("hidden")) {
     body.style.overflow = "hidden";
-    box.style.filter = "blur(5px)";
-  } else body.style.overflow = "visible";
+    sections.forEach((section) => (section.style.filter = "blur(5px)"));
+  } else {
+    sections.forEach((section) => (section.style.filter = "none"));
+    body.style.overflow = "visible";
+  }
 
   box.classList.toggle("active");
   dropdown.classList.toggle("hidden");

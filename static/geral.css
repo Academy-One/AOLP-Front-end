@@ -443,7 +443,7 @@ h2 {
 .dropdown {
     z-index: 9999;
     position: absolute;
-    top: -6%;
+    top: -4%;
     right: 0;
     width: 100%;
     background-color: #FFF;
