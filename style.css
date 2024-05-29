@@ -148,6 +148,15 @@
 }
 
 
+.curso--img {
+    
+}
+
+.painel-img-box .conquista--img {
+    width: 30%;
+    text-align: center;
+}
+
 .painel-img-box, 
 .curso--img {
     width: 60%;
@@ -173,7 +182,6 @@
 
 .item-curso {
     display: flex;
-    justify-content: flex-start;
     gap: 2.4rem;
 }
 
@@ -194,6 +202,16 @@
 
 .item-curso-img {
     
+}
+
+.curso--opcoes {
+    /* FLEX */
+    justify-self: flex-end;   
+}
+
+.curso--opcoes-icon {
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -218,8 +236,7 @@
 .opcao-de-visualizacao, 
 .opcao-colunas {
     width: 24px;
-    height: 24px;
-    
+    height: 24px;   
 }
 
 .opcao-de-visualizacao--active {
@@ -232,7 +249,7 @@
     grid-auto-flow: row;
     column-gap: 2.4rem;
     row-gap: 4.4rem;
-    justify-items: center;
+    /* justify-items: center; */
     list-style: none;
     padding: 2.4rem 0;
 }
@@ -244,7 +261,8 @@
     list-style: none;
     column-gap: 2.4rem;
     row-gap: 4.4rem;
-    padding: 2.4rem 0;
+    padding: 3.6rem 0;
+    overflow-y: scroll;
 }
 
 .item-conquista {
@@ -257,11 +275,7 @@
     height: auto;
 }
 
-.item-conquista img {
-    width: 45px;
-    height: 25px;
-    /* height: auto; */
-}
+
 
 
 
@@ -297,7 +311,6 @@
 
 
 /* - CAROUSEL - */
-
 
 .carousel-control.prev {
     left: 10px;

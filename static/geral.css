@@ -285,6 +285,7 @@ h2 {
     font-weight: 600;
 
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.8rem;
 }
@@ -499,6 +500,13 @@ h2 {
     transition: 0.3s all;
 }
 
+
+.menu-btn:hover {
+    transform: translate(0, 2px);
+    
+
+}
+
 .menu-btn:hover {
     cursor: pointer;
 }
@@ -628,11 +636,12 @@ h2 {
 }
 
 .slide {
+    border-radius: 7px;
+    background: linear-gradient(150deg, #3b46af, #1D267D, #141c61);
     display: flex;
     align-items: center;
-    height: 100%;
-    background-color: #000;
     text-align: center;
+    height: 100%;
     padding: 3rem;
 
     transition: 0.3s all;

@@ -200,8 +200,7 @@
     </header>
     <section class="section--dashboard">
         <header class="perfil-header">
-            <h2 class="heading-secundária bem-vindo">Bem vindo de volta, Eredin</h2>
-            
+            <h2 class="heading-secundária bem-vindo">Bem vindo de volta, Eredin</h2> 
         </header>
         <div class="dashboard container">
             <h3 class="heading-terciaria">Continue de onde parou</h3>
@@ -235,8 +234,8 @@
                             <progress id="conquista--progresso" value="70" max="100">70%</progress>
                             <span class="conquista--progresso-texto">70%</span>
                         </div>
-                        <div class="painel-img-box curso">
-                            <!-- <img class="curso--img" src="./course.jpg" alt=""/> -->
+                        <div class="painel-img-box conquista">
+                            <img class="conquista--img" src="./assets/conquistas/conquista.png" alt=""/>
                         </div>
                         <!-- <div class="painel-btns-box">
                     </div> -->
@@ -280,12 +279,43 @@
                         </div>
                     </div>
                 </li>         
+                <li class="lista--item-curso">
+                    <div class="item-curso">
+                        <img class="item-curso-img" src="./course.jpg" alt="curso"/>
+                        <div class="item-curso-conteudo">
+                            <h3 class="item-curso-título">Título</h3>
+                            <span class="curso-instrutor">
+                                Instrutor
+                            </span>
+                            <progress id="course--progress--3" value="70" max="100">70%</progress>
+                            <span class="course--progress-text">70%</span>
+                        </div>
+                    </div>
+                </li>         
+                <li class="lista--item-curso">
+                    <div class="item-curso">
+                        <img class="item-curso-img" src="./course.jpg" alt="curso"/>
+                        <div class="item-curso-conteudo">
+                            <h3 class="item-curso-título">Título</h3>
+                            <span class="curso-instrutor">
+                                Instrutor
+                            </span>
+                            <progress id="course--progress--3" value="70" max="100">70%</progress>
+                            <span class="course--progress-text">70%</span>
+                        </div>
+                        <span class="curso--opcoes">
+                            <svg class="curso--opcoes-icon"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </span>
+                    </div>
+                </li>         
             </ul>
         </div>
         <div class="conquistas container">
             <div class="heading-container">
                 <h3 class="heading-terciaria">Conquistas</h3>
-                <a href="#btn--open" id="btn--open" class="modal--btn-open">Ver tudo</a>
+                <a id="btn--open" class="modal--btn-open">Ver tudo</a>
             </div>
             <ul class="lista--conquistas">
                 <li class="item-conquista">
@@ -312,38 +342,19 @@
                     </p>
                    </div>
                 </li>
-                <li class="item-conquista">
-                   <img src="assets/conquistas/conquista.png">
-                   <div class="item-conquista-descricao">
-                    <p class="conquista-descricao">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
-                    </p>
-                   </div>
-                </li>
-                <li class="item-conquista">
-                   <img src="assets/conquistas/conquista.png">
-                   <div class="item-conquista-descricao">
-                    <p class="conquista-descricao">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
-                    </p>
-                   </div>
-                </li>
-                <li class="item-conquista">
-                   <img src="assets/conquistas/conquista.png">
-                   <div class="item-conquista-descricao">
-                    <p class="conquista-descricao">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
-                    </p>
-                   </div>
-                </li>
+            <a href="#" class="btn btn--main">Adquirir mais conquistas</a>
             </ul>
         </div>
     </section>
-    <section class="section--cta">
+    <section class="section--explorar">
         <div class="cta-conteudo container">
             <h3 class="heading-terciaria">Explorar</h3>
             <div class="slider">
-                        <div class="slide">
+                <div class="slide"><h2>Blog</h2></div>
+                <div class="slide"><h2>Estações</h2></div>
+                <div class="slide"><h2>Downloads</h2></div>
+                <div class="slide"><h2>Discussões</h2></div>
+                        <!-- <div class="slide">
                             <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                             </svg>
@@ -382,7 +393,7 @@
             
                     <svg class="carousel-arrow carousel-arrow__right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>     
+                    </svg>      -->
                 </div>
     </section>
     <footer class="footer--alt">
@@ -408,7 +419,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>     
         </span>
-        <div class="caixa-de-opcoes">
+        <!-- <div class="caixa-de-opcoes">
             <span class="opcao-lista">
                 <svg class="opcao-de-visualizacao opcao-de-visualizacao--active opcao-lista" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
@@ -419,7 +430,7 @@
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
                 </svg>
             </span>
-        </div>
+        </div> -->
          <ul class="modal-lista--conquistas">
                 <li class="item-conquista">
                    <img src="assets/conquistas/conquista.png">
@@ -453,6 +464,86 @@
                     </p>
                    </div>
                 </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
                 <li class="item-conquista">
                    <img src="assets/conquistas/conquista.png">
                    <div class="item-conquista-descricao">

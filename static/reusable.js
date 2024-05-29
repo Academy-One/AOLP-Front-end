@@ -18,33 +18,41 @@ const subMenus = document.querySelectorAll(".nav-submenu-list");
 const arrowsOpen = document.querySelectorAll(".arrow--open");
 const arrowsClose = document.querySelectorAll(".arrow--close");
 
-
 // Grid View Options
 const gridViewOptions = document.querySelector('.caixa-de-opcoes')
-const gridViewBtns = document.querySelectorAll('.opcao-de-visualizacao');
-const gridView = document.querySelector(".modal-lista--conquistas");
-const gridItems = document.querySelectorAll(".item-conquista");
+const gridViewBtns = document.querySelectorAll('.opcao-de-visualizacao')
+
+// Modal Window and Overlay
+const overlay = document.querySelector(`.overlay`);
+const modalWindow = document.querySelector(".modal--conquistas");
+const btnOpenModal = document.querySelector(".modal--btn-open");
+const btnCloseModal = document.querySelector(".modal--btn-close");
+
+
+
+// const gridView = document.querySelector(".modal-lista--conquistas");
+// const gridItems = document.querySelectorAll(".item-conquista");
 
 // gridList.style.gridTemplateColumns = 'repeat(3, 1fr)';
 
-gridViewOptions.addEventListener("click", (e) => {
-  const clicked = e.target;
+// gridViewOptions.addEventListener("click", (e) => {
+//   const clicked = e.target;
 
-  gridViewBtns.forEach((btn) =>
-    btn.classList.remove("opcao-de-visualizacao--active")
-  );
+//   gridViewBtns.forEach((btn) =>
+//     btn.classList.remove("opcao-de-visualizacao--active")
+//   );
 
-  // return gridView.style.gridTemplateColumns = 'auto'
-  if (clicked.classList.contains("opcao-lista")) {
-    clicked.classList.add("opcao-de-visualizacao--active");
-    gridView.style.gridTemplateColumns = "auto";
-  }
+//   // return gridView.style.gridTemplateColumns = 'auto'
+//   if (clicked.classList.contains("opcao-lista")) {
+//     clicked.classList.add("opcao-de-visualizacao--active");
+//     gridView.style.gridTemplateColumns = "auto";
+//   }
 
-  if (clicked.classList.contains("opcao-colunas")) {
-    clicked.classList.add("opcao-de-visualizacao--active");
-    gridView.style.gridTemplateColumns = "repeat(2,  1fr)";
-  }
-});
+//   if (clicked.classList.contains("opcao-colunas")) {
+//     clicked.classList.add("opcao-de-visualizacao--active");
+//     gridView.style.gridTemplateColumns = "repeat(2,  1fr)";
+//   }
+// });
 
 // Open Mobile Nav
 const controlMenu = function () {
@@ -108,20 +116,30 @@ menuList.addEventListener("click", function (e) {
   }
 });
 
-const overlay = document.querySelector(`.overlay`);
-const modalWindow = document.querySelector(".modal--conquistas");
-const btnOpenModal = document.querySelector(".modal--btn-open");
-const btnCloseModal = document.querySelector(".modal--btn-close");
 
-btnOpenModal.addEventListener("click", () => {
+
+
+
+
+btnOpenModal.addEventListener("click", function() {
   body.style.overflow = "hidden";
   modalWindow.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });
 
-btnCloseModal.addEventListener("click", () => {
-  body.style.overflow = "auto";
-  modalWindow.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
 
+[btnCloseModal, overlay].forEach(function(item) {
+  item.addEventListener('click', () => {
+
+    body.style.overflow = "auto";
+    modalWindow.classList.add("hidden");
+    overlay.classList.add("hidden");
+  })
+})
+
+// btnCloseModal.addEventListener("click", function() {
+// });
+
+// overlay.addEventListener('click', () => {
+
+// })
