@@ -18,6 +18,7 @@
 
 
 .perfil-header {
+    z-index: 9999;
     background-color: #d7f2fc;
     display: grid;
     justify-items: start;
@@ -38,11 +39,9 @@
 /*===============*/
 
 
-
 .section--dashboard {
     padding: 6.4rem 0;
 }
-
 
 .dashboard {
     display: grid;
@@ -70,6 +69,7 @@
 }
 
 .painel-tag {
+    color: #1D267D;
     font-size: 1.2rem;
     border-radius: 7px;
     font-weight: 600;
@@ -81,7 +81,11 @@
     gap: 2.4rem;
 }
 
-.dashboard-painel {
+.dashboard--painel {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left: 4px solid #35BEF0;
+    padding-left: 1.2rem;
     display: flex;
     flex-direction: column;
     padding-bottom: 1.6rem;
@@ -92,6 +96,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
+    min-width: 50%;
 }
 
 .painel-conteudo-texto {
@@ -150,7 +155,6 @@
     text-align: end;
     align-self: center;
     border-radius: 11px;
-    margin-top: 11px;
 }
 
 
@@ -206,7 +210,7 @@
 
 .opcao-de-visualizacao {
     color: inherit;
-
+    cursor: pointer;
     transition: 0.3s all;
 }
 
@@ -223,20 +227,29 @@
 }
 
 
-
-
 .lista--conquistas {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
     column-gap: 2.4rem;
     row-gap: 4.4rem;
     justify-items: center;
     list-style: none;
+    padding: 2.4rem 0;
+}
+
+.modal-lista--conquistas {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    list-style: none;
+    column-gap: 2.4rem;
+    row-gap: 4.4rem;
+    padding: 2.4rem 0;
 }
 
 .item-conquista {
+    display: flex;
     gap: 2.4rem;
-
 }
 
 .item-conquista img {
@@ -244,10 +257,17 @@
     height: auto;
 }
 
+.item-conquista img {
+    width: 45px;
+    height: 25px;
+    /* height: auto; */
+}
+
+
+
 /*=========*/
 /* - CTA - */
 /*=========*/
-
 
 .cta-conteudo {
     display: grid;
@@ -279,43 +299,6 @@
 /* - CAROUSEL - */
 
 
-.carousel {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel-item img {
-    width: 100%;
-    display: block;
-}
-
-.carousel-control {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1;
-}
-
-
-
 .carousel-control.prev {
     left: 10px;
 }
@@ -323,3 +306,5 @@
 .carousel-control.next {
     right: 10px;
 }
+
+

@@ -7,6 +7,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/static/geral.css"></link>
     <link rel="stylesheet" href="/style.css"></link>
+    <link rel="stylesheet" href="/modal.css"></link>
 
     <!-- Ionicons config -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -193,10 +194,10 @@
                             </svg>
                             Sair
                         </a>
-                      </div>
-                  </nav>
-              </div>
-      </header>
+                    </div>
+            </nav>
+        </div>
+    </header>
     <section class="section--dashboard">
         <header class="perfil-header">
             <h2 class="heading-secundária bem-vindo">Bem vindo de volta, Eredin</h2>
@@ -205,7 +206,7 @@
         <div class="dashboard container">
             <h3 class="heading-terciaria">Continue de onde parou</h3>
             <div class="dashboard--paineis">
-                <div class="dashboard-painel">
+                <div class="dashboard--painel">
                     <a class="painel--link" href="/matriculas.html">
                         <div class="painel-conteudo">
                             <div class="painel-conteudo-texto">
@@ -282,18 +283,9 @@
             </ul>
         </div>
         <div class="conquistas container">
-            <h3 class="heading-terciaria">Conquistas</h3>
-            <div class="caixa-de-opcoes">
-                <span class="opcao-colunas">
-                    <svg class="opcao-de-visualizacao opcao-de-visualizacao--active opcao-colunas" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
-                    </svg>
-                </span>
-                <span class="opcao-lista">
-                    <svg class="opcao-de-visualizacao opcao-lista" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-                    </svg>  
-                </span>
+            <div class="heading-container">
+                <h3 class="heading-terciaria">Conquistas</h3>
+                <a href="#btn--open" id="btn--open" class="modal--btn-open">Ver tudo</a>
             </div>
             <ul class="lista--conquistas">
                 <li class="item-conquista">
@@ -344,8 +336,6 @@
                     </p>
                    </div>
                 </li>
-              
-          
             </ul>
         </div>
     </section>
@@ -411,5 +401,75 @@
               </div>
         </div>
      </footer>
+     <div class="overlay hidden"></div>
+     <div class="modal--conquistas hidden">
+        <span class="modal--btn-close">
+            <svg class="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>     
+        </span>
+        <div class="caixa-de-opcoes">
+            <span class="opcao-lista">
+                <svg class="opcao-de-visualizacao opcao-de-visualizacao--active opcao-lista" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                </svg>  
+            </span>
+            <span class="opcao-colunas">
+                <svg class="opcao-de-visualizacao  opcao-colunas" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
+                </svg>
+            </span>
+        </div>
+         <ul class="modal-lista--conquistas">
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>
+                <li class="item-conquista">
+                   <img src="assets/conquistas/conquista.png">
+                   <div class="item-conquista-descricao">
+                    <p class="conquista-descricao">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu lorem imperdiet, lacinia nisl sed.
+                    </p>
+                   </div>
+                </li>  
+            </ul>
+     </div>
 </body>
-</html><h1>Welcome to the website generated by my demo repository</h1>
+</html>
